@@ -1,0 +1,1 @@
+//数据渲染$(function (){    //发送ajax请求，获取一级分类的数据    $.ajax({        type:"get",        url:"category/queryTopCategory",        success:function (data) {            var html = template("tpl",data);            $(".lt category l .mui-scroll").html(html);            //渲染完一级分类后，渲染二级分类（默认渲染data.rows[0]）            renderSecond(data.rows[0].id);        }    });});
